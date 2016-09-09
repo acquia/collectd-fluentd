@@ -1,0 +1,45 @@
+{
+  "plugins" : [
+    {
+      "config" : {
+        "@type" : "forward",
+        "bind" : "0.0.0.0",
+        "port" : "24224"
+      },
+      "output_plugin" : false,
+      "plugin_category" : "input",
+      "plugin_id" : "object:115a044",
+      "retry_count" : null,
+      "type" : "forward"
+    },
+    {
+      "config" : {
+        "@type" : "monitor_agent",
+        "bind" : "0.0.0.0",
+        "port" : "24220"
+      },
+      "output_plugin" : false,
+      "plugin_category" : "input",
+      "plugin_id" : "object:115948c",
+      "retry_count" : null,
+      "type" : "monitor_agent"
+    },
+    {
+      "buffer_queue_length" : 20,
+      "buffer_total_queued_size" : 10,
+      "config" : {
+        "@type" : "kinesis",
+        "buffer_type" : "memory",
+        "flush_interval" : "1s",
+        "partition_key" : "tag",
+        "region" : "us-east-1",
+        "stream_name" : "example-stream-123"
+      },
+      "output_plugin" : true,
+      "plugin_category" : "output",
+      "plugin_id" : "object:1176f14",
+      "retry_count" : 0,
+      "type" : "kinesis"
+    }
+  ]
+}
