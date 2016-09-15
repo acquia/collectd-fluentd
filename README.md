@@ -1,5 +1,7 @@
 # collectd_fluentd
 
+[![Build Status](https://travis-ci.org/acquia/collectd_fluentd.svg?branch=master)](https://travis-ci.org/acquia/collectd_fluentd)
+
 A plugin for [collectd](http://www.collectd.org) to gather metrics from a [fluentd](http://www.fluentd.org) instance, with a
 focus on easy installation and configuration.
 
