@@ -6,6 +6,7 @@ RUN yum install -y epel-release \
     git \
     python-devel \
     python-pip \
+    rpm-build \
 
   # Install Python deps
   && pip install tox \

@@ -6,3 +6,4 @@ python:
 script:
   - docker inspect collectd-fluentd-dev >/dev/null 2>&1 || docker build -t collectd-fluentd-dev .
   - docker run -it --rm -v $(pwd)/:/src --workdir=/src collectd-fluentd-dev tox
+  - docker run -it --rm -v $(pwd)/:/src --workdir=/src collectd-fluentd-dev setup.py bdist_rpm
